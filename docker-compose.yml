@@ -1,0 +1,31 @@
+---
+services:
+  ansible1:
+    build: https://github.com/gjrtimmer/docker-sshd.git
+    image: ansible/playground:latest
+    container_name: ansible1
+    hostname: ansible1
+    environment:
+      SSH_PASSWORD: "ubuntu"
+    ports:
+      - "2021:22"
+
+  ansible2:
+    build: https://github.com/gjrtimmer/docker-sshd.git
+    image: ansible/playground:latest
+    container_name: ansible2
+    hostname: ansible2
+    environment:
+      SSH_PASSWORD: "ubuntu"
+    ports:
+      - "2022:22"
+
+  ansible3:
+    build: https://github.com/gjrtimmer/docker-sshd.git
+    image: ansible/playground:latest
+    container_name: ansible3
+    hostname: ansible3
+    environment:
+      SSH_PASSWORD: "ubuntu"
+    ports:
+      - "2023:22"
