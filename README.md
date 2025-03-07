@@ -37,6 +37,7 @@ Docker compose is shipped with any recent version of docker. However, when using
 nodes:
   vars:
     ansible_connection: ssh
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
     ansible_host: localhost
     ansible_user: ubuntu
     ansible_ssh_pass: ubuntu
